@@ -111,6 +111,7 @@ class Amo{
 			  502 => 'Bad gateway',
 			  503 => 'Service unavailable'
 		);
+		
 		try
 		{
 		  if($code != 200 && $code != 204) {
@@ -133,13 +134,19 @@ class Amo{
 				Получаем статусы. В рабочем варианте, для этого, можно использовать возможности API 
 				*/
 			
+			$status_new = $status_agreement = $status_complete = 0;
+			
 			switch ($value['status_id']) {
 				case 8043866:
-					$status = "Согласование договора";
+					//$status = "Согласование договора";
+					$status_agreement = 1;
 					break;
 				case 8043964:
-					$status = "Успешно реализована";
+					//$status = "Успешно реализована";
+					$status_complete = 1;
 					break;
+				default:
+					$status = 0;
 			}
 			
 			/*
@@ -154,7 +161,9 @@ class Amo{
 			
 			$leads[$i]['lead_date']		= date('d.m.y',$value['created_at'])	;
 			$leads[$i]['lead_manager']	= $manager;
-			$leads[$i]['lead_status']	= $status;
+			$leads[$i]['lead_new']		= $status_new;
+			$leads[$i]['lead_agreement']= $status_agreement;
+			$leads[$i]['lead_complete']	= $status_complete;
 			$leads[$i]['lead_sale']		= $value['sale'];
 		
 			$i++;
