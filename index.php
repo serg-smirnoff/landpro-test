@@ -1,16 +1,16 @@
 <?php
 
-$params = file_get_contents('params.txt');
-var_dump($params);
+$file = file_get_contents('params.txt');
+$params = explode(':', $file);
 
-$user=array(
- 'USER_LOGIN'=>'test@testmail.com', #Ваш логин (электронная почта)
- 'USER_HASH'=>'7ebefd1d4741106a4daa0e0a673bba2e4dc16054' #Хэш для доступа к API (смотрите в профиле пользователя)
+$user = array(
+	'USER_LOGIN'	=>	$params[0], 
+	'USER_HASH'		=>	$params[2]
 );
 
-$subdomain='test'; #Наш аккаунт - поддомен
-#Формируем ссылку для запроса
+$subdomain = $params[4];
 $link='https://'.$subdomain.'.amocrm.ru/private/api/auth.php?type=json';
+
 /* Нам необходимо инициировать запрос к серверу. Воспользуемся библиотекой cURL (поставляется в составе PHP). Вы также
 можете
 использовать и кроссплатформенную программу cURL, если вы не программируете на PHP. */
