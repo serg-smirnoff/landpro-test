@@ -7,8 +7,11 @@ use AMO;
 use GOOGLESHEETS;
 
 $amo = new \AMO\Amo();
-$amo->getAuth();
-print_r($amo->getLeads());
-
 //var_dump(get_class_methods($amo));
 //var_dump(get_class_vars($amo));
+
+$amo->getAuth();
+$leads = $amo->getLeads();
+
+$gss = new \GOOGLESHEETS\Googlesheets();
+$gss->setDoc($leads);

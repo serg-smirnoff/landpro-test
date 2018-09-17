@@ -6,7 +6,7 @@ class Amo{
 	
 	function __construct(){
 		
-		$file = file_get_contents('config/params.txt');
+		$file = file_get_contents('config/params-amo.txt');
 		$params = explode(':', $file);
 
 		$this->auth = [
@@ -125,8 +125,6 @@ class Amo{
 		$Response = json_decode($out,true);
 		$Response = $Response['_embedded']['items'];
 	
-		//var_dump($Response);
-	
 		$i = 0;
 		
 		foreach ($Response as $key => $value){
@@ -149,8 +147,7 @@ class Amo{
 				*/
 			
 			switch ($value['responsible_user_id']) {
-				
-				case '308516':
+				case 308516:
 					$manager = "Сергей Смирнов";
 					break;
 			}
