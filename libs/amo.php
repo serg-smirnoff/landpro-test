@@ -6,7 +6,7 @@ class Amo{
 	
 	function __construct(){
 		
-		$file = file_get_contents('params.txt');
+		$file = file_get_contents('config/params.txt');
 		$params = explode(':', $file);
 
 		$this->auth = [
@@ -165,7 +165,6 @@ class Amo{
 		}
 
 		return $leads;
-		
 		
 	}
 	

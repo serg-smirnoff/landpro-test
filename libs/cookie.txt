@@ -5,4 +5,4 @@
 #HttpOnly_.amocrm.ru	TRUE	/	TRUE	0	session_id	tpq815e95cl7cck553nurmbgi084pdn4de5kklkvhditckuv4cq1
 #HttpOnly_.amocrm.ru	TRUE	/	TRUE	1692711888	BITRIX_SM_LOGIN	info%40onlysites.ru
 #HttpOnly_.amocrm.ru	TRUE	/	TRUE	1568295888	BITRIX_SM_SALE_UID	0
-.amocrm.ru	TRUE	/	FALSE	1694958498	user_lang	ru
+.amocrm.ru	TRUE	/	FALSE	1694958971	user_lang	ru
