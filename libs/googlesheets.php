@@ -93,9 +93,7 @@ class Googlesheets{
 		{
 			die('Ошибка: '.$E->getMessage().PHP_EOL.'Код ошибки: '.$E->getCode());
 		}
-		
-		//return $service->spreadsheets_values->update($spreadsheetId, $range, $body, ['valueInputOption' => 'RAW']);
-		
+				
 	}
 	
 }
