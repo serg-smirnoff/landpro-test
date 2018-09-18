@@ -69,10 +69,10 @@ class Amo{
 		$Response = $Response['response'];
 
 		if(isset($Response['auth'])){
-				echo "Авторизация прошла успешно<br />";
+				echo "Авторизация в AMO.CRM прошла успешно<br />";
 				return true;
 			} else {
-				echo "Авторизация не удалась<br />";
+				echo "Авторизация в AMO.CRM не удалась<br />";
 				return false;
 			}
 	}

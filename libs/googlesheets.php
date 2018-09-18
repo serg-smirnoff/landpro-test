@@ -69,10 +69,9 @@ class Googlesheets{
 		$range = 'A2:F';
 		
 		/*
-			Данный алгоритм нужно допилить для расчета количества статусов сделок
+			Данный алгоритм требует доработки
 			*/
-		var_dump($leads);
-		
+				
 		foreach ($leads as $k => $v){
 			$i=0;
 			foreach ($v as $k2 => $v2){
@@ -81,8 +80,6 @@ class Googlesheets{
 			}
 		}
 		
-		var_dump($ret);
-		
 		$body = new \Google_Service_Sheets_ValueRange([
 			'values' => $ret
 		]);
@@ -90,7 +87,9 @@ class Googlesheets{
 		try
 		{
 			if (!$result = $service->spreadsheets_values->update($spreadsheetId, $range, $body, ['valueInputOption' => 'RAW']))
-				throw new Exception('Error');
+				throw new Exception('Error'); else {
+					echo "Данные записаны в таблицу Google SpreadSheets";
+				}
 		}
 		catch(Exception $E)
 		{
