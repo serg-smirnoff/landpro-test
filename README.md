@@ -1,7 +1,7 @@
 # landpro-test
 
 Скрипт реализует выгрузку данных по сделкам из AMO.CRM и пишет их в Google.Spreadsheet
-Показана работал 2х API (AMO.CRM + Google.Spreadsheets)
+Показана работа 2х API (AMO.CRM + Google.Spreadsheets)
 
 1. Скриншот админки AMO: https://prnt.sc/kvl66r
 2. Исходники скрипта: https://github.com/serg-smirnoff/landpro-test/
