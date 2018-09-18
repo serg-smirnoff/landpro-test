@@ -2,8 +2,6 @@
 
 namespace GOOGLESHEETS;
 
-//require '/var/www/onlysites/data/www/test.onlysites.ru/git-repositories/landpro-test/vendor/autoload.php';
-
 class Googlesheets{
 		
 	function __construct(){
