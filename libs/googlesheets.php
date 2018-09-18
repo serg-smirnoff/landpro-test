@@ -88,7 +88,7 @@ class Googlesheets{
 		{
 			if (!$result = $service->spreadsheets_values->update($spreadsheetId, $range, $body, ['valueInputOption' => 'RAW']))
 				throw new Exception('Error'); else {
-					echo "Данные записаны в таблицу Google SpreadSheets";
+					echo "Данные записаны в <a href=\"https://docs.google.com/spreadsheets/d/1jMs7oIQTOc1vPPTrdz7WGsgR1b8siizM-pgb5pRAZ78/edit#gid=0\">таблицу Google SpreadSheets</a>";
 				}
 		}
 		catch(Exception $E)

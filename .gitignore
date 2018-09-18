@@ -1,3 +1,5 @@
 /doc/info.txt
-/config/params.txt
+/config/credentials.json
+/config/params-amo.txt
+/config/params-google.txt
 gss.php
