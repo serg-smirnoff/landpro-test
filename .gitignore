@@ -3,3 +3,4 @@
 /config/params-amo.txt
 /config/params-google.txt
 gss.php
+token.json
